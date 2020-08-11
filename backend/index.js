@@ -7,7 +7,6 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-
 app.post('/code_run', (req, res) => {
 	const language = req.body.language
 	const script = req.body.script
@@ -15,10 +14,10 @@ app.post('/code_run', (req, res) => {
 })
 
 app.get('/languages', (req, res) => {
-    res.json(languages)
+    	res.json(languages)
 })
 
 const PORT = 3002
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
+  	console.log(`Server running on port ${PORT}`)
 })
